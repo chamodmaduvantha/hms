@@ -1,0 +1,82 @@
+
+CREATE DATABASE hms;
+
+CREATE TABLE patient(
+id int NOT NULL AUTO_INCREMENT,
+firstname varchar(100),
+surname varchar(100),
+username varchar(100),
+email varchar(100),
+phone varchar(100),
+gender varchar(100),
+country varchar(100),
+password varchar(100),
+date_reg varchar(100),
+profile varchar(100),
+PRIMARY KEY (id)
+);
+
+
+CREATE TABLE doctors(
+id int NOT NULL AUTO_INCREMENT,
+firstname varchar(100),
+surname varchar(100),
+username varchar(100),
+email varchar(100),
+gender varchar(100),
+phone varchar(100),
+country varchar(100),
+password varchar(100),
+salary varchar(100),
+data_reg varchar(100),
+status varchar(100),
+profile varchar(100),
+PRIMARY KEY (id)
+);
+
+
+
+CREATE TABLE admin(
+id int NOT NULL AUTO_INCREMENT,
+username varchar(100),
+password varchar(100),
+profile varchar(100),
+PRIMARY KEY (id)
+);
+
+
+CREATE TABLE income(
+id int NOT NULL AUTO_INCREMENT,
+doctor varchar(100),
+patient varchar(100),
+date_discharge varchar(100),
+amount_paid varchar(100),
+description varchar(100),
+date_check varchar(100),
+PRIMARY KEY (id)
+);
+
+
+
+CREATE TABLE report(
+id int NOT NULL AUTO_INCREMENT,
+title varchar(100),
+message varchar(100),
+username varchar(100),
+date_send varchar(100),
+PRIMARY KEY (id)
+);
+
+
+CREATE TABLE appointment(
+id int NOT NULL AUTO_INCREMENT,
+firstname varchar(100),
+surname varchar(100),
+gender varchar(100),
+phone varchar(100),
+ppointment_date varchar(100),
+symptoms varchar(100),
+status varchar(100),
+date_booked varchar(100),
+PRIMARY KEY (id)
+);
